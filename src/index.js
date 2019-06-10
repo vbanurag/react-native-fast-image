@@ -52,7 +52,7 @@ class FastImage extends Component {
                         onLoadEnd={onLoadEnd}
                     />
                     {children}
-                </View>
+                </Animated.View>
             )
         }
 
