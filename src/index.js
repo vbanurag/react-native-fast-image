@@ -7,6 +7,7 @@ import {
     requireNativeComponent,
     ViewPropTypes,
     StyleSheet,
+    Animated
 } from 'react-native'
 
 const FastImageViewNativeModule = NativeModules.FastImageView
@@ -36,11 +37,11 @@ class FastImage extends Component {
 
         if (fallback) {
             return (
-                <View
+                <Animated.View
                     style={[styles.imageContainer, style]}
                     ref={this.captureRef}
                 >
-                    <Image
+                    <Animated.Image
                         {...props}
                         style={StyleSheet.absoluteFill}
                         source={resolvedSource}
